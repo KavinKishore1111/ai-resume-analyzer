@@ -8,9 +8,7 @@ from sklearn.metrics.pairwise import (
     cosine_similarity
 )
 
-from app.utils.semantic_matcher import (
-    calculate_semantic_similarity
-)
+
 
 SKILL_MAPPINGS = {
 
@@ -495,12 +493,7 @@ def analyze_resume(
     )
 
     # semantic similarity score
-    semantic_score = (
-        calculate_semantic_similarity(
-            resume_text,
-            job_description
-        )
-    )
+    semantic_score = 0
 
     # skill overlap score
     if len(jd_keywords) == 0:
@@ -512,18 +505,11 @@ def analyze_resume(
         ) * 100
 
     # hybrid weighted score
-    final_score = (
-        semantic_score * 0.45
-        + skill_score * 0.55
-    )
+    final_score = skill_score
 
     # HIGH MATCH BOOST
 
-    if (
-        len(matched_keywords) >= 8
-        and skill_score >= 60
-    ):
-        final_score += 8
+    
 
     recommendations = (
     generate_recommendations(
