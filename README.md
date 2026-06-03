@@ -4,7 +4,7 @@ Production-ready full-stack web application that evaluates resume-job fit using 
 
 **Live Demo:** https://ai-resume-analyzer-gamma-opal.vercel.app
 
-**Tech Stack:** React • FastAPI • PostgreSQL • JWT • PDFPlumber • Sentence Transformers • Vercel • Render • Neon
+**Tech Stack:** React • FastAPI • PostgreSQL • JWT • PDFPlumber • Sentence Transformers • Hugging Face • Vercel • Render • Neon
 
 ---
 
@@ -98,32 +98,16 @@ The project demonstrates production-grade backend development, authentication, d
 ```text
 AI-Resume-Analyzer/
 │
-├── backend/
-│   ├── app/
-│   │   ├── routes/
-│   │   ├── models/
-│   │   ├── services/
-│   │   ├── database/
-│   │   ├── utils/
-│   │   ├── auth/
-│   │   └── main.py
-│   │
-│   ├── requirements.txt
-│   └── .env
+├── app/                    # FastAPI Backend
 │
-├── frontend/
-│   ├── src/
-│   │   ├── pages/
-│   │   ├── components/
-│   │   ├── services/
-│   │   ├── context/
-│   │   └── App.jsx
-│   │
-│   ├── package.json
-│   └── vite.config.js
+├── client/                 # React Frontend
 │
+├── assets/                 # Screenshots & Images
+│
+├── .gitignore
+├── LICENSE
 ├── README.md
-└── .gitignore
+└── requirements.txt
 ```
 
 ---
@@ -262,6 +246,37 @@ http://localhost:5173
 | created_at | TIMESTAMP |
 
 ---
+## Screenshots
+
+### Home Page
+
+![Home Page](assets/ResumeAnHome1.png)
+
+### Dashboard
+
+![Dashboard](assets/ResumeAnHome2.png)
+
+### Login
+
+![Login](assets/ResumeAnLogin.png)
+
+### Sign Up
+
+![Sign Up](assets/ResumeAnSignUp.png)
+
+### Analysis Results
+
+![Analysis Results](assets/ResumeAnAnalysis1.png)
+
+### Detailed Analysis
+
+![Detailed Analysis](assets/ResumeAnAnalysis2.png)
+
+### Analysis History
+
+![Analysis History](assets/ResumeAnHistory.png)
+
+---
 
 ## Engineering Highlights
 
@@ -337,3 +352,4 @@ MIT License
 
 **GitHub:** https://github.com/KavinKishore1111
 
+**Email:** kkavinkishore2210@gmail.com
